@@ -1,0 +1,45 @@
+目的：开发一个平台(网站)
+  - 前端开发：HTML、CSS、JavaScript
+  - Web框架
+  - MySql数据库
+
+快速上手：
+  基于Flask Web框架让你快速搭建一个网站出来
+
+深入学习：
+  基于Django框架(主要)
+
+一、快速开发网站
+  pip install flask
+
+咱们的网站和别人的不一样：
+<h1> <h1> # 加大加粗
+
+<span style='color:red;'> </span> # 字体变红色
+
+
+
+
+小结：
+   学习的标签：
+   <h1></h1>
+   <div></div>
+   <span></span>
+   <a href=链接地址></a>
+   <img src=图片地址/图片链接地址 />
+
+   划分：
+   -块级
+     <h1></h1>
+     <div></div>
+   -行内标签
+     <span></span>
+     <a href='链接地址'> </a>
+     <img src='图片地址/图片链接地址' />
+   嵌套
+     给图片嵌套地址：
+      <a href='链接地址' target='_blank'>
+         <img src='图片地址/图片链接地址' />
+      </a>
+
+

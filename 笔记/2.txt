@@ -1,0 +1,107 @@
+二、浏览器能识别的标签
+
+2.1 编码
+  <meta charset="utf-8">
+
+2.2 网站名
+  <head>
+     <meta charset="UTF-8">
+     <title> 网站名 </title>
+  </head>
+
+2.3 标题
+  <h1>一级标题</h1>
+  <h2>二级标题</h2>
+  <h3>三级标题</h3>
+  <h4>四级标题</h4>
+  <h5>五级标题</h5>
+  <h6>六级标题</h6>
+
+2.4 div和span
+  <div> 内容 </div>
+  <span> xxxxx </span>
+  div:一人占一行
+  span:自己多大占多少 【行内标签、内联标签】
+
+2.4.5 超链接
+  <a href=链接网址 (target="_blank" 在新窗口或新标签页中打开链接文档)> 超链接标题 </a>
+
+2.4.6 图片
+  显示别人图片的地址：
+  <img src='图片地址'/>
+  显示自己的图片：
+  <img src='自己图片的地址'/>
+  显示自己的图片：
+    -自己项目中创建：static目录，图片要放在static
+    -在页面是引入图片
+    <img src='/static/图片名'/>
+    关于设置图片的高度和宽度
+    <img style='height:600px;width:100px'> -设置长宽
+    <img style='width:10%' src='地址或链接'>
+
+2.4.7 列表
+<ul>
+   <li>xxxx</li>
+   <li>xxxx</li>
+   <li>xxxx</li>
+   <li>xxxx</li>
+   <li>xxxx</li>
+</ul>
+
+2.4.8 表格
+<table>
+  <thead>
+      <tr>  <th>ID</th>  <th>姓名</th>  <th>年龄</th> </tr>
+  </thead>
+  <tbody>
+      <tr>  <td>10</td>  <td>德川</td>  <td>26</td> </tr>
+      <tr>  <td>11</td>  <td>我修院</td>  <td>25</td> </tr>
+      <tr>  <td>12</td>  <td>淳平</td>  <td>28</td> </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>
+           头像
+      </th>
+    </tr>
+  <thead>
+  <tbody>
+    <tr><img src='地址' style='height:50px;width:50px'></tr>
+  </tdoby>
+</table>
+
+2.4.9 input系列（7个）
+<input type="text" />
+<input type="password">
+<input type="file">  上传文件
+单选框：
+<input type="radio" name="n1"> 男
+<input type="radio" name="n1"> 女
+复选框：
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+按钮：
+<input type="button" value="按钮上的字">  --普通的按钮
+<input type="submit" value="表单上的字">  --提交表单
+
+2.4.10下拉框
+单选：
+<select>
+  <option>选项1</option>
+  <option>选项2</option>
+  <option>选项3</option>
+</select>
+多选：
+<select multiple>
+  <option>选项1</option>
+  <option>选项2</option>
+  <option>选项3</option>
+<select>
+
+2.4.11多行文本
+<textarea rows="">  文本内容   </textarea>
+（--rows="" 默认文本框行高为5）
