@@ -28,7 +28,13 @@ def register():
 
 @app.route('/storage',methods=['GET'])
 def do_register():
-  print(request.args)
+  user = request.form.get("user")
+  pwd = request.form.get("pwd")
+  sex = request.form.get("n1")
+  hobby = request.form.get("hobby")
+  skills=request.form.get('skills')
+  more=request.form.get('signature')
+  print(user,pwd,sex,hobby,skills,more)
   return "Successful!"
 
 if __name__=='__main__':

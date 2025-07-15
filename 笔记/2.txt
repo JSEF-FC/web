@@ -74,23 +74,41 @@
 </table>
 
 2.4.9 input系列（7个）
+
 <input type="text" />
 <input type="password">
 <input type="file">  上传文件
+
 单选框：
-<input type="radio" name="n1"> 男
-<input type="radio" name="n1"> 女
+<input type="radio" name="n1" value='1'> 男
+<input type="radio" name="n1" value='2'> 女
+name属性
+作用：分组单选按钮，确保同一组内只能选择一个选项。
+示例说明：
+两个单选按钮的 name="n1" 表示它们属于同一组（组名为 n1）
+用户在这一组中只能选择一个选项（选择其中一个时，另一个会自动取消选中）
+value属性
+作用：定义选中时提交的值（表单提交到服务器时使用）
+示例说明：
+如果用户选中第一个按钮（value='1'），提交数据时会是n1=1
+如果选中第二个按钮（value='2'），提交数据时会是n1=2
+
 复选框：
+<input type="checkbox" name='' value=''>
 <input type="checkbox">
 <input type="checkbox">
-<input type="checkbox">
+name属性:
+用于分组复选框（同一组的复选框共享相同name）
+关键区别：用户可以同时选择多个同名的复选框
+（value属性和上面相同）
+
 按钮：
 <input type="button" value="按钮上的字">  --普通的按钮
 <input type="submit" value="表单上的字">  --提交表单
 
 2.4.10下拉框
 单选：
-<select>
+<select >
   <option>选项1</option>
   <option>选项2</option>
   <option>选项3</option>
