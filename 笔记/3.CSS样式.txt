@@ -1,0 +1,49 @@
+CSS样式:
+3.1 css,专门用来"美化"标签
+3.2 CSS应用方式
+（1）在标签上
+<img src="xxx" style="height:50px;width:50px">
+<div style="color:red;"> 中国联通 </div>
+
+（2）在head标签中写style标签
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .c1{color:red;}
+    </style>
+</head>
+<body>
+
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+
+（3）写到文件中
+common.css文件中：
+.c1{
+     height:100px;
+}
+.c2{
+     color:red;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="common.css"/>
+</head>
+<body>
+
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
