@@ -6,31 +6,34 @@
 </head>
 <body>
 
-<img style='height=:50px;width:50px' src="\photo\dog.png"><h2><span>请登录</span></h2>
-
+<img style='height=:50px;width:50px' src="\photo\dog.png">
+<h2>请登录</h2>
+<form>
 <h2>
-账号：<input type="text">
-密码：<input type="password">
-<input type="button" value="提交">
+账号：<input type="text" name="user">
+密码：<input type="password" name="pwd">
+<input type="submit" value="提交">
 </h2>
 
-<div>文件上传<input type="file"></div>
+<div>
+文件上传<input type="file" value="file">
+</div>
 
 <h2>真人验证环节</h2>
 
 <h3>那我问你，你是男的女的？
-<input type="radio" name="n1">男的
-<input type="radio" name="n1">女的
+<input type="radio" name="n1" value="1">男的
+<input type="radio" name="n1" value="2">女的
 </h3>
 
-<h3>真人验证：</h3>
+<h3>Wallpaper真人验证：</h3>
 <div>
-    <input type="checkbox">
+    <input type="checkbox" value="a">
 </div>
-    <input type="checkbox">
+    <input type="checkbox" value="b">
  <div>
-    <input type="checkbox">
+    <input type="checkbox" value="c">
 </div>
-
+</form>
 </body>
 </html>

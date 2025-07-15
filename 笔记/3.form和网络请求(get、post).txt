@@ -1,0 +1,108 @@
+三.网络请求
+1.在浏览器的url中写入地址，点击回车，访问
+  浏览器会发送数据过去，本质上发送的是字符串
+
+2.浏览器向后端发送请求时
+（1）GET请求
+    现象：GET请求、跳转、向后台传入数据数据会拼接在URL上。
+    注意：GET请求数据会在URL中体现
+（2）POST请求
+    现象：提交数据不在URL中而是在请求体中
+语法：
+form标签包裹想要提交的数据：
+  提交方式：method="get"
+  提交的地址：action="提交的地址"
+<form method="get" action="提交的地址">
+</form>
+
+范例：用户注册
+写函数：
+from flask import Flask,render_template,request
+
+app= Flask(__name__,static_folder='photo')
+
+@app.route('/register',methods=['GET','post'])
+def register():
+  if request.method == 'get':
+    return render_template("register.html")
+
+  else:
+    user = request.form.get("user")
+    pwd = request.form.get("pwd")
+    sex = request.form.get("n1")
+    hobby = request.form.get("hobby")
+    skills = request.form.get('skills')
+    more = request.form.get('signature')
+    print(user, pwd, sex, hobby, skills, more)
+    # 将用户信息写入文件中实现注册、写入到excel中实现注册、写入数据库中实现注册
+
+    # 给用户再返回结果
+    return "Successful!"
+
+if __name__=="__main__":
+  app.run()
+
+HTML代码：
+<h1>用户注册</h1>
+<form method="get" action="/storage">
+<div>
+    账号:<input type="text" name="user">
+</div>
+<div>
+    密码:<input type="password" name="pwd">
+</div>
+<div>
+性别：
+    <input type="radio" name="n1" value="1">男
+    <input type="radio" name="n1" value="2">女
+</div>
+<div>
+爱好：
+<input type="checkbox" name="hobby" value="11"> 编程
+<input type="checkbox" name="hobby" value="12"> 演奏
+<input type="checkbox" name="hobby" value="13"> 阅读
+</div>
+<div>
+    你所在的国家：
+    <select name="country">
+        <option value="zg">中国</option>
+        <option value="mg">美国</option>
+        <option value="yg">英国</option>
+        <option value="fg">法国</option>
+        <option value="eg">俄国</option>
+        <option value="rb">日本</option>
+    </select>
+</div>
+擅长的领域(按住ctrl实现多选)：
+<div>
+    <select name="skills" multiple>
+        <option value="100">PYTHON</option>
+        <option value="101">C</option>
+        <option value="102">C++</option>
+        <option value="103">C#</option>
+        <option value="104">JAVA</option>
+        <option value="105">SWIFT</option>
+    </select>
+</div>
+<div>
+个性签名:
+</div>
+<textarea rows="5" name="signature">
+这个人很神秘，什么也没有留下~
+</textarea>
+<div>
+<input type="submit" value="submit">
+<input type="button" value="button">
+</div>
+</form>
+
+总结
+1.称呼
+HTML标签，超文本传输语言（与浏览器搭配）
+2.HTML标签（默认格式样式、以后通过手段可以修改）
+3.HTML标签与编程语言无关
+    java + HTML
+    C# + HTML
+    php + HTML
+    python + HTML
+4.提醒：HTML标签比较多，标签还有很多很多，不必逐一学会。
