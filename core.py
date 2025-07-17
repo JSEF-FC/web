@@ -18,9 +18,9 @@ def toolsbox():
   return render_template('tools_box.html')
 
 
-@app.route('/sign/in',methods=['get','post'])
+@app.route('/sign/in',methods=['GET','POST'])
 def signin():
-  if request.method == 'get':
+  if request.method == 'GET':
     return render_template('sign.html')
   else:
     user = request.form.get("user")
@@ -31,13 +31,12 @@ def signin():
     b = request.form.get('b')
     c = request.form.get('c')
     print(user, pwd, sex, file, a, b, c)
-
     return "Successful!"
 
 
-@app.route('/register',methods=['GET','post'])
+@app.route('/register',methods=['GET','POST'])
 def register():
-  if request.method == 'get':
+  if request.method == 'GET':
     return render_template("register.html")
   else:
     user = request.form.get("user")
@@ -47,7 +46,6 @@ def register():
     skills = request.form.get('skills')
     more = request.form.get('signature')
     print(user, pwd, sex, hobby, skills, more)
-
     return "Successful!"
 
 

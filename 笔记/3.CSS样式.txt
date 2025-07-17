@@ -16,7 +16,6 @@ CSS样式:
     </style>
 </head>
 <body>
-
 <h1 class='c1'>用户登录</h1>
 <h1 class='c1'>用户登录</h1>
 <h1 class='c1'>用户登录</h1>
@@ -41,7 +40,6 @@ common.css文件中：
     <link rel="stylesheet" href="common.css"/>
 </head>
 <body>
-
 <h1 class='c1'>用户登录</h1>
 <h1 class='c1'>用户登录</h1>
 <h1 class='c1'>用户登录</h1>
