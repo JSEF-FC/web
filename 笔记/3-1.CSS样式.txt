@@ -1,0 +1,155 @@
+CSS样式:
+3.1 css,专门用来"美化"标签
+3.2 CSS应用方式
+（1）在标签上
+<img src="xxx" style="height:50px;width:50px">
+<div style="color:red;"> 中国联通 </div>
+
+（2）在head标签中写style标签
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .c1{color:red;}
+    </style>
+</head>
+<body>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+
+（3）写到文件中
+common.css文件中：
+.c1{
+     height:100px;
+}
+.c2{
+     color:red;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="common.css"/>
+</head>
+<body>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+<h1 class='c1'>用户登录</h1>
+
+（3） 在static（默认）里创建一个css文件
+.c1{
+color:red;
+}
+在html里调用：
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sign</title>
+    <link rel="stylesheet" href="\photo\css_shop.css">
+</head>
+<body>
+<img style='height=:50px;width:50px' src="\photo\dog.png">
+<h1 class="c1">请登录</h1>
+
+
+3.3 css的选择器
+类选择器：
+.c1{} 对应 <div class="c1"></div>
+
+ID选择器：
+#.c2{} 对应 <div id="c2"></div>
+
+标签选择器：
+xx{} 对应 <xx>    </xx>
+
+属性选择器：
+  input[type='text']
+      {border:1px solid red;}
+  .v1[xx="123"]
+      {color:gold;}
+
+<div class="c2">
+    账号:<input type="text" name="user">
+</div>
+
+<div class="v1" xx="123">abc</div>
+
+后代选择器：
+      .yy li
+      {color:red;}
+
+      .yy > a
+      {color:blue;}
+
+<ul>
+    <li>1</li>
+    <li>4</li>
+    <li>7</li>
+</ul>
+
+<div class="yy">
+  <a>baidu</a>
+  <div>
+      <a>google</a>
+  </div>
+  <ul>
+      <li>1</li>
+      <li>4</li>
+      <li>7</li>
+  </ul>
+</div>
+
+关于多个选择器覆盖的问题：
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .c1{
+          color: red;
+          border: 1px solid red;
+      }
+      .c2{
+          font-size: 28px;
+          color:green;
+      }
+    </style>
+</head>
+<body>
+  <div class="c1 c2">中国联通</div>
+</body>
+</html>
+
+补充：下面的不覆盖上面的
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .c1{
+          color: red !important;
+          border: 1px solid red;
+      }
+      .c2{
+          font-size: 28px;
+          color:green;
+      }
+    </style>
+</head>
+<body>
+  <div class="c1 c2">中国联通</div>
+</body>
+</html>
