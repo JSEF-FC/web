@@ -1,0 +1,83 @@
+3.4样式
+（1）高度和宽度
+ .c1{
+      height: 300px;
+      width: 500px;
+    }
+ 注意事项：
+ 宽度高度支持百分比
+ 行内标签：默认无效
+ 块级标签：默认有效（霸道，右侧区域空白，也不给你占用）
+
+（2）块级和行内标签
+块级
+行内
+CSS样式：
+标签->display:inline-block
+标签->style="display:block/inline"
+范例：
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .c1{
+        display:inline-block;
+        height:100px;
+        width:300px;
+        border:1px solid red;
+    }
+    </style>
+</head>
+<body>
+   <span class="c1">123456789</span>
+   <span class="c1">123456789</span>
+   <span class="c1">123456789</span>
+   <div style="display:inline">中国</div>
+   <span style="display:block">联通</span>
+</body>
+</html>
+
+注意：块级+块级&行内
+
+（3）字体和颜色
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .c1{
+            color: #2F4F4F;
+            font-size:58px;
+            font-weight:400;
+            font-family:"Arial"
+        }
+    </style>
+</head>
+<body>
+    <div class="c1">中国联通</div>
+    <div>中国联通</div>
+</body>
+</html>
+
+（4）文字对齐方式
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .c1{
+        text-align:center; /* 水平方向居中 */
+        line-height:59px; /* 垂直方向居中 */
+        border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div class="c1">1safsdf23</div>
+</body>
+</html>
+
