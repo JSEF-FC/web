@@ -86,29 +86,8 @@ xx{} 对应 <xx>    </xx>
 <div class="v1" xx="123">abc</div>
 
 后代选择器：
-      .yy li
-      {color:red;}
-
-      .yy > a
-      {color:blue;}
-
-<ul>
-    <li>1</li>
-    <li>4</li>
-    <li>7</li>
-</ul>
-
-<div class="yy">
-  <a>baidu</a>
-  <div>
-      <a>google</a>
-  </div>
-  <ul>
-      <li>1</li>
-      <li>4</li>
-      <li>7</li>
-  </ul>
-</div>
+.header a	必须是 <a> 标签	所有后代 <a>	<a href="#">、<a class="other">
+.header .a	必须包含 class="a"	所有后代带有类 a	<div class="a">、<a class="a">
 
 关于多个选择器覆盖的问题：
 <!DOCTYPE html>

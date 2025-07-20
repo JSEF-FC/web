@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body
+        {margin:0;}
+
+        .sub-header
+        { height:100px;
+          background-color:#b0b0b0;}
+
+        .container
+        { width:1128px;
+          margin:0 auto;}
+
+        .sub-header .logo
+        { width:234px;
+          height:100px;
+          float:left;}
+
+        .sub-header .menu
+        { float:left;
+          height:100px;
+          width:350px;}
+
+        .sub-header .menu a
+        { color:white;
+          padding-top:40px;
+          padding-left:20px;
+          display:inline-block;}
+
+        .sub-header .menu a:hover
+        {  color:red;
+        }
+
+        .sub-header .search
+        { float:right;
+          height:100px;
+          padding-top:40px;}
+
+    </style>
+</head>
+<body>
+    <div class="sub-header">
+        <div class="container">
+            <div  class="logo">
+            <!--行内标签：默认设置高度、边距无效   解决办法：块级 & 行内+块级-->
+               <a href="xxx" style="margin-top: 22px;display: inline-block">
+                   <img src="/photo/mi.png" style="width:56px;height:56px;">
+               </a>
+            </div>
+            <div class="menu" >
+            <!--display:inline-block;将行内标签转为块级-->
+                <a href="xxx">手机</a>
+                <a href="xxx">电脑</a>
+                <a href="xxx">平板</a>
+                <a href="xxx">家电</a>
+                <a href="xxx">优品</a>
+            </div>
+            <div class="search">
+              <form>
+                <input type="text">
+                <input type="submit" value="提交">
+              </form>
+            </div>
+            <div class="clear:both"></div>
+        </div>
+    </div>
+</body>
+</html>
