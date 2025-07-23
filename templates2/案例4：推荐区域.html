@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       body {margin:0;}
+
+      .header {color:#b0b0b0;
+      background: #333;}
+
+      .container{
+          width:1266px;
+          margin:0 auto;}
+
+      .header .menu
+      {  float:left;
+      color:white;
+          }
+
+      .header .account
+      {    float:right;
+      color:white;
+          }
+
+      .header a
+      {   color:#b0b0b0;
+          line-height: 40px;
+          display:inline-block;
+          font-size:12px;
+          margin-right:5px;}
+
+      .header a:hover{
+          color:white;
+      }
+
+        .sub-header
+        { height:100px;
+          background-color:#b0b0b0;}
+
+        .container
+        { width:1128px;
+          margin:0 auto;}
+
+        .sub-header .logo
+        { width:234px;
+          height:100px;
+          float:left;}
+
+        .sub-header .menu
+        { float:left;
+          height:100px;
+          width:350px;}
+
+        .sub-header .menu a
+        { color:black;
+          padding-top:40px;
+          padding-left:20px;
+          display:inline-block;
+          text-decoration:none;
+           opacity:1.5}
+
+        .sub-header .menu a:hover
+        {  color:white;
+        }
+
+        .sub-header .search
+        { float:right;
+          height:100px;
+          padding-top:40px;}
+
+        .slider img
+        {
+          width:1100px;
+          height:460px;
+        }
+
+        .news list
+        {
+          width:231px;
+          height:171px;
+          border:1px solid red;
+        }
+
+        .news img
+        {
+          width:270px;
+          height:230px;
+          float:right;
+          margin:5px;
+        }
+        .float
+        {
+          float:left;
+        }
+    </style>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+        <div class="menu">
+            <a>小米商城</a>
+            <a>MIUI</a>
+            <a>云服务</a>
+            <a>有品</a>
+            <a>下载App</a>
+        </div>
+        <div class="account">
+           <a>登录</a>
+           <a>注册</a>
+           <a>消息通知</a>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+  </div>
+      <div class="sub-header">
+        <div class="container">
+            <div  class="logo">
+            <!--行内标签：默认设置高度、边距无效   解决办法：块级 & 行内+块级-->
+               <a href="xxx" style="margin-top: 22px;display: inline-block">
+                   <img src="/photo/mi.png" style="width:56px;height:56px;">
+               </a>
+            </div>
+            <div class="menu" >
+            <!--display:inline-block;将行内标签转为块级-->
+                <a href="xxx">手机</a>
+                <a href="xxx">电脑</a>
+                <a href="xxx">平板</a>
+                <a href="xxx">家电</a>
+                <a href="xxx">优品</a>
+            </div>
+            <div class="search">
+              <form>
+                <input type="text">
+                <input type="submit" value="提交">
+              </form>
+            </div>
+            <div class="clear:both"></div>
+        </div>
+    </div>
+
+<div class="slider">
+    <div class="container">
+        <div class="sd-img">
+            <img src="/photo/mi2.png" alt="sdf">
+        </div>
+    </div>
+</div>
+
+<div class="news">
+   <div class="container">
+        <div class="channel"></div>
+        <div class="list" ><img src="/photo/mi.png"/></div>
+        <div class="list"><img src="/photo/mi1.png"/></div>
+        <div class="list"><img src="/photo/mi2.png"/></div>
+        <div class="clear:both"></div>
+   </div>
+</div>
+</body>
+</html>
